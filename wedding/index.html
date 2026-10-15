@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Abhinand Weds Vaidoorya | Wedding Invitation</title>
+  <meta name="description"
+    content="Wedding Invitation of Abhinand & Vaidoorya on 28th January 2023, 11:45 AM to 12:15 PM at Mottemmal House, Thuvakkunnu.">
+  <meta property="og:title" content="Abhinand Weds Vaidoorya - Wedding Invitation">
+  <meta property="og:description"
+    content="Wedding of Abhinand & Vaidoorya - 28 January 2023 at Mottemmal House, Thuvakkunnu.">
+  <meta property="og:image" content="image1.jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Falling Rose Petals Canvas -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- Background Music Player (Reel Song: Satyam Sarva Mangalyam by Joel Johns & Vijay Anand) -->
+  <audio id="weddingAudio" loop preload="auto">
+    <source src="wedding_song.m4a" type="audio/mp4">
+    <source src="seetha_kalyanam.m4a" type="audio/mp4">
+    <source src="aasai_mugam.m4a" type="audio/mp4">
+  </audio>
+
+  <!-- Persistent Floating Music & Share Navigation Bar -->
+  <nav class="floating-top-bar" id="floatingTopBar">
+    <div class="top-bar-brand" id="brandCoverToggle" title="Go to Front Cover">
+      <span class="brand-monogram">A &bull; V</span>
+    </div>
+
+    <div class="top-bar-actions">
+      <!-- Music Toggle Pill Button -->
+      <button class="music-pill-btn" id="musicToggleBtn" title="Play / Pause Wedding Song" aria-label="Toggle Music">
+        <span class="music-note-icon">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+          </svg>
+        </span>
+        <div class="sound-wave-bars">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+          <span class="bar bar-4"></span>
+        </div>
+        <span class="music-pill-label" id="musicLabel">Music</span>
+      </button>
+
+      <!-- Share Button -->
+      <button class="top-icon-btn" id="btnShareInvite" title="Share Invitation" aria-label="Share">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+          <path
+            d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" />
+        </svg>
+      </button>
+
+      <!-- Song Selector Button -->
+      <button class="top-icon-btn" id="btnSongMenu" title="Choose Music" aria-label="Song Menu">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+          <path
+            d="M12 3v9.28a4.39 4.39 0 0 0-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Container (Standard Mobile Reel Width) -->
+  <div class="reel-container">
+
+    <!-- ================================================================= -->
+    <!-- VIEW 1: FRONT PAGE (LIGHT THEME, FLORAL ARCH, HIGH VISIBILITY IMAGES) -->
+    <!-- ================================================================= -->
+    <section class="page-view cover-page-view" id="coverPageView">
+
+      <div class="arch-card-frame">
+        <!-- Floral Arch Perimeter -->
+        <img src="arch_cover.jpg" alt="Floral Wedding Arch" class="arch-bg-img">
+
+        <!-- Luminous Light Center Frosting (Ensures high contrast & clean visibility) -->
+        <div class="arch-luminous-veil"></div>
+
+        <!-- Arch Hanging Golden Lamps -->
+        <div class="arch-hanging-lanterns" aria-hidden="true">
+          <div class="arch-lamp lamp-left">
+            <div class="lamp-chain-gold"></div>
+            <div class="lamp-lantern-head"><span class="lamp-spark"></span></div>
+          </div>
+          <div class="arch-lamp lamp-right">
+            <div class="lamp-chain-gold"></div>
+            <div class="lamp-lantern-head"><span class="lamp-spark"></span></div>
+          </div>
+        </div>
+
+        <!-- Inner Content Card (High Contrast, Light Luxury Theme) -->
+        <div class="arch-inner-content">
+
+          <!-- 1. Centered AV Monogram Emblem -->
+          <div class="arch-monogram-emblem">
+            <svg class="arch-monogram-svg" viewBox="0 0 100 100" width="78" height="78">
+              <circle cx="50" cy="50" r="43" fill="#ffffff" stroke="#cba358" stroke-width="1.6"
+                filter="drop-shadow(0 2px 6px rgba(203,163,88,0.25))" />
+              <circle cx="50" cy="50" r="39" fill="none" stroke="#e0c282" stroke-width="0.8" stroke-dasharray="3,2" />
+              <path
+                d="M16 50 C14 36 24 20 42 14 M84 50 C86 36 76 20 58 14 M16 50 C14 64 24 80 42 86 M84 50 C86 64 76 80 58 86"
+                fill="none" stroke="#cba358" stroke-width="1" />
+              <text x="36" y="58" font-family="'Cormorant Garamond', 'Great Vibes', serif" font-size="33"
+                font-weight="700" fill="#75152a" text-anchor="middle">A</text>
+              <text x="64" y="60" font-family="'Cormorant Garamond', 'Great Vibes', serif" font-size="33"
+                font-weight="700" fill="#75152a" text-anchor="middle">V</text>
+              <polygon points="50,89 52,92 50,95 48,92" fill="#cba358" />
+            </svg>
+          </div>
+
+          <!-- 2. "YOU ARE INVITED" -->
+          <h2 class="arch-invited-text">YOU ARE INVITED</h2>
+
+          <!-- 3. Couple Circular Profiles (High Visibility, Bright, Focused Crops) -->
+          <div class="arch-couples-row">
+            <!-- Bride: Vaidoorya -->
+            <div class="arch-profile-card">
+              <div class="arch-avatar-circle">
+                <img src="bride_face.jpg" alt="Vaidoorya - The Bride" class="avatar-face-img">
+              </div>
+              <h3 class="arch-profile-name">Vaidoorya</h3>
+              <span class="arch-profile-role">BRIDE</span>
+            </div>
+
+            <!-- Heart Connector -->
+            <div class="arch-heart-bridge">
+              <span class="arch-heart-icon">❤️</span>
+            </div>
+
+            <!-- Groom: Abhinand -->
+            <div class="arch-profile-card">
+              <div class="arch-avatar-circle">
+                <img src="groom_face.jpg" alt="Abhinand - The Groom" class="avatar-face-img">
+              </div>
+              <h3 class="arch-profile-name">Abhinand</h3>
+              <span class="arch-profile-role">GROOM</span>
+            </div>
+          </div>
+
+          <!-- 4. Muhurtham Date & Time -->
+          <div class="arch-muhurtham-block">
+            <span class="arch-muhurtham-badge">MUHURTHAM</span>
+            <p class="arch-event-date">Saturday, 28 January 2023</p>
+            <p class="arch-event-time">11.45AM &ndash; 12.15PM</p>
+          </div>
+
+          <!-- 5. Pulsing "VIEW INVITATION" Button -->
+          <div class="arch-cta-wrapper">
+            <button class="btn-view-invitation-primary" id="btnViewInvitationCover">
+              <span class="cta-ripple"></span>
+              <span class="cta-text">VIEW INVITATION</span>
+              <span class="cta-arrow">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+
+        </div> <!-- /arch-inner-content -->
+      </div> <!-- /arch-card-frame -->
+
+      <div class="cover-footer-note">
+        <span class="music-hint-text">🎵 Click "VIEW INVITATION" to unveil &amp; play wedding music</span>
+      </div>
+
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIEW 2: UNVEILED FULL INVITATION (MATCHING SECOND UPLOADED IMAGE) -->
+    <!-- ================================================================= -->
+    <section class="page-view invitation-page-view" id="invitationPageView" style="display: none;">
+
+      <!-- Top Return Bar -->
+      <div class="back-cover-bar">
+        <button class="btn-back-cover" id="btnBackToCover" title="Go back to front cover">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+          </svg>
+          <span>Front Cover</span>
+        </button>
+        <span class="header-badge-tag">Wedding Invitation</span>
+      </div>
+
+      <!-- ------------------------------------------------------------- -->
+      <!-- SECTION 2.1: HERO SCREEN (EXACT SECOND UPLOADED IMAGE) -->
+      <!-- ------------------------------------------------------------- -->
+      <div class="hero-unveiled-card" id="heroUnveiledCard">
+
+        <!-- Story Profile Header Tag -->
+        <div class="hero-mini-header">
+          <div class="mini-avatar-wrap">
+            <img src="image1.jpeg" alt="Abhinand and Vaidoorya">
+          </div>
+          <div class="mini-meta">
+            <strong>Abhinand &bull; Vaidoorya</strong>
+            <span>Wedding Invitation</span>
+          </div>
+        </div>
+
+        <!-- Hanging Kerala Brass Lanterns (Left & Right) -->
+        <div class="hanging-lanterns-wrapper" aria-hidden="true">
+          <div class="hanging-lantern lantern-l">
+            <div class="lantern-chain"></div>
+            <div class="lantern-brass-fixture">
+              <div class="fixture-dome"></div>
+              <div class="lantern-glass">
+                <div class="lantern-wick"></div>
+              </div>
+              <div class="fixture-base"></div>
+            </div>
+          </div>
+          <div class="hanging-lantern lantern-r">
+            <div class="lantern-chain"></div>
+            <div class="lantern-brass-fixture">
+              <div class="fixture-dome"></div>
+              <div class="lantern-glass">
+                <div class="lantern-wick"></div>
+              </div>
+              <div class="fixture-base"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corner Botanical Foliage -->
+        <div class="botanical-foliage foliage-tl" aria-hidden="true"></div>
+        <div class="botanical-foliage foliage-tr" aria-hidden="true"></div>
+
+        <!-- Main Typography -->
+        <div class="hero-texts-group">
+          <h2 class="title-getting-married">WE ARE GETTING MARRIED</h2>
+
+          <!-- Monogram Emblem (AV) -->
+          <div class="monogram-emblem-box">
+            <svg class="monogram-svg" viewBox="0 0 100 100" width="86" height="86">
+              <circle cx="50" cy="50" r="44" fill="#fffdfa" stroke="#bfa373" stroke-width="1.3" opacity="0.9" />
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#d5be8f" stroke-width="0.8" stroke-dasharray="3,2"
+                opacity="0.65" />
+              <path
+                d="M14 50 C12 36 24 18 42 12 M86 50 C88 36 76 18 58 12 M14 50 C12 64 24 82 42 88 M86 50 C88 64 76 82 58 88"
+                fill="none" stroke="#bfa373" stroke-width="1" opacity="0.7" />
+              <text x="36" y="58" font-family="'Cormorant Garamond', 'Great Vibes', serif" font-size="34"
+                font-weight="700" fill="#75152a" text-anchor="middle">A</text>
+              <text x="64" y="60" font-family="'Cormorant Garamond', 'Great Vibes', serif" font-size="34"
+                font-weight="700" fill="#75152a" text-anchor="middle">V</text>
+              <polygon points="50,91 52,94 50,97 48,94" fill="#bfa373" />
+            </svg>
+          </div>
+
+          <h1 class="couple-names-header">ABHINAND &amp; VAIDOORYA</h1>
+
+          <!-- Date Row: JANUARY | 28 | 2023 -->
+          <div class="date-hero-grid">
+            <div class="date-part month-part">JANUARY</div>
+            <div class="date-divider-line"></div>
+            <div class="date-part day-number-part">28</div>
+            <div class="date-divider-line"></div>
+            <div class="date-part year-part">2023</div>
+          </div>
+
+          <!-- Muhurtham Timing -->
+          <div class="muhurtham-time-pill" id="heroTimePill" title="Click to play music">
+            <span class="time-text">11.45AM</span>
+            <span class="time-speaker-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+              </svg>
+            </span>
+            <span class="time-text">12.15PM</span>
+          </div>
+        </div>
+
+        <!-- Couple Photo with Botanical Leaves and Interactive Play/Pause Button -->
+        <div class="hero-couple-showcase">
+          <div class="botanical-leaves-side leaves-left" aria-hidden="true"></div>
+          <div class="botanical-leaves-side leaves-right" aria-hidden="true"></div>
+
+          <div class="couple-photo-frame">
+            <img id="heroCoupleImg" src="image1.jpeg" alt="Abhinand and Vaidoorya" class="couple-photo-main">
+
+            <!-- Central Play/Pause Overlay Button -->
+            <button class="central-play-button" id="centralPlayBtn" aria-label="Toggle Wedding Music">
+              <div class="play-ring-pulse"></div>
+              <div class="play-btn-circle">
+                <svg id="centralPlayIcon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg id="centralPauseIcon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor"
+                  style="display:none;">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+                </svg>
+              </div>
+            </button>
+
+            <!-- Quick Photo Switcher Button -->
+            <button class="photo-change-btn" id="openPhotoModalBtn" title="Upload / Change Photo">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path
+                  d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+              </svg>
+              <span>Change Photo</span>
+            </button>
+          </div>
+
+          <!-- Ticker of current playing track -->
+          <div class="audio-ticker-badge" id="audioTickerBadge">
+            <span class="ticker-note-icon">🎵</span>
+            <span class="ticker-text" id="tickerText">Satyam Sarva Mangalyam &bull; Joel Johns, Vijay Anand</span>
+          </div>
+        </div>
+
+      </div> <!-- /hero-unveiled-card -->
+
+      <!-- ------------------------------------------------------------- -->
+      <!-- SECTION 2.2: THE ADVENTURE & COUNTDOWN -->
+      <!-- ------------------------------------------------------------- -->
+      <div class="adventure-card-block">
+        <div class="crimson-adventure-card">
+          <p class="adventure-pretitle">We are waiting for.....</p>
+          <h2 class="adventure-main-title">The Adventure</h2>
+
+          <!-- 4 Countdown Boxes: Days, Hours, Minutes, Seconds -->
+          <div class="countdown-boxes-row">
+            <div class="countdown-single-box">
+              <span class="box-digit" id="valDays">0</span>
+              <span class="box-unit">Days</span>
+            </div>
+            <div class="countdown-single-box">
+              <span class="box-digit" id="valHours">0</span>
+              <span class="box-unit">Hours</span>
+            </div>
+            <div class="countdown-single-box">
+              <span class="box-digit" id="valMinutes">0</span>
+              <span class="box-unit">Minutes</span>
+            </div>
+            <div class="countdown-single-box">
+              <span class="box-digit" id="valSeconds">0</span>
+              <span class="box-unit">Seconds</span>
+            </div>
+          </div>
+
+          <p class="countdown-caption" id="countdownCaption">
+            Celebrating the sacred bond of Abhinand &amp; Vaidoorya since 28 January 2023
+          </p>
+
+          <div class="timer-mode-switcher">
+            <button class="timer-mode-btn active" id="btnModeDaysTogether">Days of Love</button>
+            <button class="timer-mode-btn" id="btnModeNextAnniversary">Next Anniversary</button>
+          </div>
+        </div>
+
+        <!-- Happy Couples Section (High Visibility Face Avatars) -->
+        <div class="happy-couples-section">
+          <div class="flourish-header-divider">
+            <span class="flourish-wing"></span>
+            <span class="flourish-icon">❦</span>
+            <span class="flourish-wing"></span>
+          </div>
+
+          <h2 class="happy-couples-heading">Happy Couples</h2>
+          <p class="couples-quote">"Two souls with but a single thought, two hearts that beat as one."</p>
+
+          <div class="couple-circular-profiles">
+            <div class="profile-card">
+              <div class="profile-ring">
+                <img src="groom_face.jpg" alt="Abhinand - Groom" class="profile-thumb">
+              </div>
+              <h3 class="profile-name">Abhinand</h3>
+              <span class="profile-tag">The Groom</span>
+            </div>
+
+            <div class="heart-center-connector">
+              <span class="heart-icon-badge">❤️</span>
+            </div>
+
+            <div class="profile-card">
+              <div class="profile-ring">
+                <img src="bride_face.jpg" alt="Vaidoorya - Bride" class="profile-thumb">
+              </div>
+              <h3 class="profile-name">Vaidoorya</h3>
+              <span class="profile-tag">The Bride</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ------------------------------------------------------------- -->
+      <!-- SECTION 2.3: WHEN & WHERE (CEREMONY & VENUE DETAILS) -->
+      <!-- (Send Wishes removed as requested!) -->
+      <!-- ------------------------------------------------------------- -->
+      <div class="venue-card-block">
+        <div class="venue-card-header">
+          <h2 class="when-where-heading">When &amp; Where</h2>
+          <div class="flourish-header-divider">
+            <span class="flourish-wing"></span>
+            <span class="flourish-icon">✿</span>
+            <span class="flourish-wing"></span>
+          </div>
+        </div>
+
+        <div class="ceremony-venue-card">
+          <div class="mandapam-photo-frame">
+            <img src="mandapam.jpg" alt="Kerala Traditional Mandapam Ceremony" class="mandapam-photo">
+            <div class="mandapam-tag">
+              <span>✨ Auspicious Muhurtham</span>
+            </div>
+          </div>
+
+          <div class="venue-content-block">
+            <h3 class="muhurtham-title">Muhurtham</h3>
+
+            <div class="venue-info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z" />
+                </svg>
+              </div>
+              <div class="info-details">
+                <strong>Saturday, 28 January 2023</strong>
+                <span>11.45 AM &ndash; 12.15 PM</span>
+              </div>
+            </div>
+
+            <div class="venue-info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+              </div>
+              <div class="info-details">
+                <strong>Mottemmal House</strong>
+                <span>Thuvakkunnu, Kannur, Kerala</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons: Google Maps Location & Add to Calendar -->
+            <div class="venue-action-buttons">
+              <a href="https://www.google.com/maps/search/?api=1&query=Mottemmal+House+Thuvakkunnu" target="_blank"
+                rel="noopener noreferrer" class="btn-location-crimson">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                <span>See Location on Google Maps</span>
+              </a>
+
+              <button class="btn-calendar-gold" id="btnCalendarExport">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+                </svg>
+                <span>Add to Calendar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Festive Shower Rose Petals Floating Button -->
+      <div class="celebrate-floating-container">
+        <button class="btn-shower-petals" id="btnShowerPetals">
+          <span>🌸 Shower Rose Petals</span>
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <footer class="story-footer">
+        <div class="footer-crest">AV</div>
+        <p class="footer-couple">Abhinand &bull; Vaidoorya</p>
+        <p class="footer-place">Mottemmal House, Thuvakkunnu &bull; 28 Jan 2023</p>
+      </footer>
+
+    </section>
+
+  </div> <!-- /reel-container -->
+
+  <!-- ================================================================= -->
+  <!-- MODAL: SONG SELECTION & AUDIO SETTINGS -->
+  <!-- ================================================================= -->
+  <div class="custom-modal" id="musicModal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <h3>Choose Background Wedding Song</h3>
+        <button class="modal-x" id="closeMusicModalBtn">&times;</button>
+      </div>
+      <div class="modal-content">
+        <p class="modal-sub">Select the soundtrack you wish to play:</p>
+
+        <div class="song-options-list">
+          <div class="song-option-card active" data-src="wedding_song.m4a" data-title="Satyam Sarva Mangalyam"
+            data-artist="Joel Johns & Vijay Anand (From Reference Reel)">
+            <div class="song-radio-circle"></div>
+            <div class="song-meta">
+              <strong>Satyam Sarva Mangalyam</strong>
+              <span>Joel Johns, Vijay Anand (Original Track from Reference Reel)</span>
+            </div>
+            <span class="track-badge">Reel Song</span>
+          </div>
+
+          <div class="song-option-card" data-src="seetha_kalyanam.m4a" data-title="Seetha Kalyana Vaibhogame"
+            data-artist="Agam - Walk of the Bride">
+            <div class="song-radio-circle"></div>
+            <div class="song-meta">
+              <strong>Seetha Kalyana Vaibhogame</strong>
+              <span>Agam &bull; Walk of the Bride (Traditional Wedding Kriti)</span>
+            </div>
+            <span class="track-badge">Seetha Kalyanam</span>
+          </div>
+
+          <div class="song-option-card" data-src="aasai_mugam.m4a" data-title="Aasai Mugam Marandhu Poche"
+            data-artist="Bharathiyar Classical">
+            <div class="song-radio-circle"></div>
+            <div class="song-meta">
+              <strong>Aasai Mugam Marandhu Poche</strong>
+              <span>Suchitra &amp; Sai Madhukar (Bharathiyar Classical)</span>
+            </div>
+            <span class="track-badge">Aasai Mugam</span>
+          </div>
+        </div>
+
+        <div class="upload-custom-track-box">
+          <h4>Or upload your own MP3/audio file:</h4>
+          <input type="file" id="customAudioInput" accept="audio/*" class="file-hidden">
+          <button class="btn-outline-gold" id="btnUploadOwnSong">Select File From Device</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL: UPLOAD / CHANGE HERO PHOTO -->
+  <!-- ================================================================= -->
+  <div class="custom-modal" id="photoModal">
+    <div class="modal-card">
+      <div class="modal-top">
+        <h3>Change Couple Photo</h3>
+        <button class="modal-x" id="closePhotoModalBtn">&times;</button>
+      </div>
+      <div class="modal-content">
+        <p class="modal-sub">Choose from couple photos or upload a new picture from your device:</p>
+
+        <div class="photo-presets-grid">
+          <button class="preset-btn active" data-src="image1.jpeg" title="Main Portrait">
+            <img src="image1.jpeg" alt="Photo 1">
+          </button>
+          <button class="preset-btn" data-src="image2.jpeg" title="Traditional Pose">
+            <img src="image2.jpeg" alt="Photo 2">
+          </button>
+          <button class="preset-btn" data-src="image3.jpeg" title="Outdoor Shot">
+            <img src="image3.jpeg" alt="Photo 3">
+          </button>
+        </div>
+
+        <div class="custom-upload-zone" id="uploadZone">
+          <input type="file" id="heroFileInput" accept="image/*" class="file-hidden">
+          <div class="upload-icon-ring">📷</div>
+          <p><strong>Click to browse</strong> or drag &amp; drop an image</p>
+          <span>Supports JPG, PNG, WEBP, HEIC</span>
+        </div>
+
+        <div class="upload-preview-area" id="uploadPreviewArea" style="display:none;">
+          <img id="uploadPreviewImg" src="" alt="Preview">
+          <div class="preview-actions-row">
+            <button class="btn-location-crimson" id="btnApplyCustomPhoto">Apply Photo</button>
+            <button class="btn-outline-gold" id="btnCancelCustomPhoto">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Popup -->
+  <div class="toast-popup" id="toastPopup"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
